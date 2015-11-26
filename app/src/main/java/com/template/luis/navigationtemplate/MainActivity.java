@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_INDEFINITE)
+                Snackbar.make(view, "Snackbar", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Action", new View.OnClickListener(){
                             @Override
-                            public void onClick(View view){
-                                Snackbar action =  Snackbar.make(view, "Message is restored!", Snackbar.LENGTH_LONG).setAction("null", null);
+                            public void onClick(View v){
+                                Snackbar action =  Snackbar.make(v, "Action was received!", Snackbar.LENGTH_LONG).setAction("null", null);
                                 View subView = action.getView();
                                 TextView text_inside = (TextView) subView.findViewById(android.support.design.R.id.snackbar_text);
                                 text_inside.setTextColor(Color.CYAN);
